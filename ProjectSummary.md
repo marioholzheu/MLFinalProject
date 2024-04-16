@@ -8,7 +8,8 @@ https://www.kaggle.com/c/uw-madison-gi-tract-image-segmentation
 ### The Problem 
 In 2019, around 5 million people worldwide were diagnosed with a type of cancer that affects the digestive system. About half of these patients might receive radiation treatment. This treatment involves targeting the cancer with X-ray beams every day for a few weeks, while trying not to harm the stomach and intestines. New technology allows doctors to see exactly where the tumor and intestines are each day, which is important because their positions can change. Normally, doctors have to manually adjust the radiation equipment to make sure the beams hit the tumor and not the other organs, a process that takes a lot of time. This could take so long that what should be a quick treatment might last an hour, making it hard for patients. There's hope that using deep learning technology could speed this up by automatically adjusting the equipment.
 
-https://lh5.googleusercontent.com/zbBUgbj1jyZxyu3r1vr5zKKr8yK1hSdwAM3HpD_n6j2W-5-wKP3ZRusi_3yskSgnC-tMRKqOEtLycbLkTWCJAUe4Cylv_VsW81DYI4ray02uZLeSnlzAuZRIU7L2Q0KURYSMqFI![Uploading image.png…]()
+![image](https://github.com/marioholzheu/MLFinalProject/assets/163416187/b5ba0dd8-a8eb-4e3c-9588-32f3af73bfe1)
+
 
 
 The UW-Madison Carbone Cancer Center, which has been using this technology since 2015, is supporting a project to improve this process. They're providing anonymous MRI scans from their patients for a competition. The challenge is to create a computer model that can identify the stomach and intestines on these scans quickly. If successful, this would help doctors deliver stronger, safer radiation doses more quickly, improving treatment for cancer patients by reducing side effects and helping them control their cancer better.
