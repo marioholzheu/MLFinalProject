@@ -63,25 +63,36 @@ Three Columns:
 #### sample_submission.csv
 ![Screenshot 2024-04-16 at 23 29 10](https://github.com/marioholzheu/MLFinalProject/assets/163416187/5719add9-76cd-4453-a479-29e3013163ba)
 
-
-
 #### train folder
-- 85 cases / 1 - 5 Sets / 144 images or ... images
+- 85 cases / 1 - 5 Sets / 144 images or 80 images
 - Images name: (ex. 276_276_1.63_1.63.png)
   - always includes 4 numbers: slice width / height (integers in pixels) -> resolution - and width / height pixel spacing (floating points in mm) -> size of pixel 
 
 #### test folder
 - empty -> hidden test set
- 
-
 
 
 #### Data Analysis
-Data Analysis well explained - good for understanding the project better: https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda
+Data Analysis well explained - good for understanding the project better but with TensorFlow: https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda
 
 Core Informations:
-- ...
-- 
+
+#### Core Annotations:
+![Screenshot 2024-04-16 at 23 54 15](https://github.com/marioholzheu/MLFinalProject/assets/163416187/fafe253b-6f92-4e7f-ba29-07f1ae84a6f0)
+-> not all immages have segmentation maps for varios organs. Its possible to have 0 (21906x - 57%), 1 (2468x), 2 (10921x) or 3 (3201x) Annotations per image 
+
+#### Image Sizes and Pixel Spacing :
+Not all Images are the same size - only 4 sizes present 
+- 234 x 234 (144x)
+- 266 x 266 (25920x)
+- 276 x 276 (1200x)
+- 310 x 360 (11232x)
+
+Two different pixel spacings:
+1.5 x 1.5 (37296x)
+1.63 x 1.63 (1200x)
+
+#### Cases: 
 
 
 
