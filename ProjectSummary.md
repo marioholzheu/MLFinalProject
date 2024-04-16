@@ -101,6 +101,7 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 Yaseen:
 Drawbacks from current model. 
 Ambiguity for hyperparameters, not specified as model uses different pretrained models. To make changes in that model we will have to delve deeper into 10 or so pretrained models with pre initialized weights and hyperparameters. 
-Code difficult to implement if wamtedto make any changes. 
+Code difficult to implement if wamtedto make any changes. A very real possibility that the hidden models used for different layers of the solution are pretrained with hidden hyperparameters for the winning solution on 3rd place. 
+Currently looking into 2.5D, Unet, Unet++ and 3dUnet. 
 
 
