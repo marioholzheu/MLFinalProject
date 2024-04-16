@@ -54,6 +54,8 @@ Data Processing, Data Analysis and Data Visualization well explained:
 
 
 
+LINK to Styling Syntax:
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 
 
