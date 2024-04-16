@@ -1,25 +1,16 @@
 # MLFinalProject
-Our Final project code 
+## About the project
+### The Challenge
 
-# A first-level heading
-## A second-level heading
-### A third-level heading
+### The Problem 
 
-Existing Solutions 
+### The Impact 
 
-Data Processing, Data Analysis and Data Visualization well explained: 
-•	Just for understanding the Project better - with Tensorflow:  https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda 
+### The Data 
 
-Existing Solutions (Code): 
-•	UNET - well explained: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch - public score 0.842 
-•	UNET 2.5D - well explained: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch - public score 0.862
-•	3rd Place Winner - not well explained https://www.kaggle.com/code/hesene/3rd-place-winning-solution - public score 0.89
-•	DeepLabV3+  - Tensorflow: https://www.kaggle.com/code/dschettler8845/uwmgit-deeplabv3-end-to-end-pipeline-tf - public score 0.DeepLabV3+  - Tensorflow: https://www.kaggle.com/code/dschettler8845/uwmgit-deeplabv3-end-to-end-pipeline-tf - public score 0.81
 
-Our Code Base for Enhancements: 
-•	Suggestion from Javier: 3rd Place Winner Solution -> runs successfully
-•	Alternative: UNET 2.5D -> very good explained - needs time to get running.
-
+# Existing Solutions 
+## Overview
 Most Used Models
 •	Unet: (2D and 2.5D Model) 
 •	Monai (3D Model) 
@@ -31,9 +22,47 @@ Most Used Models
 •	2.5D
 •	3D
 
-Questions to Javier: 
-- Project Plan ok? 
-- Papers
+## Explanation for different Code Solutions
+
+### Train 2.5D U_Net https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch - public score 0.862 + infer
+
+### UNET - well explained: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch - public score 0.842 + infer 
+
+
+### 3rd Place Winner - not well explained https://www.kaggle.com/code/hesene/3rd-place-winning-solution - public score 0.89 (infer)
+
+
+### ANOTHER MODEL
+
+### ANOTHER MODEL
+
+## Conclusion
+Data Processing, Data Analysis and Data Visualization well explained: 
+•	Just for understanding the Project better - with Tensorflow:  https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda 
+
+
+# Our Code 
+## About the Code Base - What changes we had to do?  
+
+
+## What did we change and try? 
+
+
+## What other possible solutions could be tried? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Yaseen:
