@@ -28,8 +28,8 @@ This challenge adresses several of the SDGs like Good Health and Well-being, Ind
 
 ### Evaluation Metrics
 Evaluation Metrics:
-Dice Coefficient: This metric assesses the accuracy of the segmentation by measuring the overlap between the predicted segmentation and the ground truth. It gives a sense of how well the model's predictions match the actual data.
-Hausdorff Distance: This metric measures the distance between the borders of the predicted segmentation and the ground truth. It is particularly useful for understanding the maximum error in the segmentation boundary.
+- Dice Coefficient: This metric assesses the accuracy of the segmentation by measuring the overlap between the predicted segmentation and the ground truth. It gives a sense of how well the model's predictions match the actual data.
+- Hausdorff Distance: This metric measures the distance between the borders of the predicted segmentation and the ground truth. It is particularly useful for understanding the maximum error in the segmentation boundary.
 
 #### Existing Data and Files
 
