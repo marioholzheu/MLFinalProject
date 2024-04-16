@@ -1,4 +1,4 @@
-# MLFinalProject
+# 1. About our Challenge
 ## About the project
 ### The Challenge
 
@@ -9,7 +9,7 @@
 ### The Data 
 
 
-# Existing Solutions 
+# 2. Existing Solutions 
 ## Overview
 Most Used Models
 •	Unet: (2D and 2.5D Model) 
@@ -41,7 +41,7 @@ Data Processing, Data Analysis and Data Visualization well explained:
 •	Just for understanding the Project better - with Tensorflow:  https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda 
 
 
-# Our Code 
+# 3. Our Code 
 ## About the Code Base - What changes we had to do?  
 
 
