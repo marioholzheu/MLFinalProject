@@ -17,6 +17,13 @@ The Dark red part shows the stomach and the pink line shows the tumor. The rainb
 
 The UW-Madison Carbone Cancer Center, which has been using this technology since 2015, is supporting a project to improve this process. They're providing anonymous MRI scans from their patients for a competition. The challenge is to create a computer model that can identify the stomach and intestines on these scans quickly. If successful, this would help doctors deliver stronger, safer radiation doses more quickly, improving treatment for cancer patients by reducing side effects and helping them control their cancer better.
 
+### Evaluation Metrics
+This competition is evaluated on the mean Dice coefficient (40%) and 3D Hausdorff distance (60%). 
+
+- The Dice coefficient can be used to compare the pixel-wise agreement between a predicted segmentation and its corresponding ground truth. The formula is given by: ![Screenshot 2024-04-16 at 19 38 58](https://github.com/marioholzheu/MLFinalProject/assets/163416187/fff5c072-3d1c-4098-ab92-a370c2cb3558) where X is the predicted set of pixels and Y is the ground truth. The Dice coefficient is defined to be 0 when both X and Y are empty. The leaderboard score is the mean of the Dice coefficients for each image in the test set.
+
+- Hausdorff distance is a method for calculating the distance between segmentation objects A and B, by calculating the furthest point on object A from the nearest point on object B. For 3D Hausdorff, we construct 3D volumes by combining each 2D segmentation with slice depth as the Z coordinate and then find the Hausdorff distance between them. (In this competition, the slice depth for all scans is set to 1.) The scipy code for Hausdorff is linked. The expected / predicted pixel locations are normalized by image size to create a bounded 0-1 score.
+
 ### The (Sustainability) Impact 
 If this challenge is successfull it allows radiation oncologists to safely deliver higher doses of radiation to the tumor while avoiding the stomach and intestinies. This could speed up the treatments a lot, improve the success rate and reducde side effects. Patients would have a better outcome and doctors could focus on more important tasks and even may see more patients with the saved time. By this it would also contribute to several SDGs. 
 
@@ -28,16 +35,49 @@ This challenge adresses several of the SDGs like Good Health and Well-being, Ind
 
 ### The Data 
 
-### Evaluation Metrics
-This competition is evaluated on the mean Dice coefficient (40%) and 3D Hausdorff distance (60%). 
+#### Existing Data 
+Train Data: 
+- Training Annotations: RLE-encoded amsks: single value (pixel) with count of how many times that value occurs in a row -> reduction of data
+- Images: 16-bit (each pixel 65,536 shades), grayscale, PNG-Format
+- Cases:
+  - Multiple sets of scan slices
+  - Each set is identifiable by the day
+  - Cases are split by time or by case 
+      - Early Days -> Train Data
+      - Later Days -> Test Data
+      - Case -> Entire case is in train or test
+   
+Test Data (same as Train plus):
+- Entirely Unseen -> only accesible in Kaggle while running for submission
+- About 50 Cases
 
-- The Dice coefficient can be used to compare the pixel-wise agreement between a predicted segmentation and its corresponding ground truth. The formula is given by: ![Screenshot 2024-04-16 at 19 38 58](https://github.com/marioholzheu/MLFinalProject/assets/163416187/fff5c072-3d1c-4098-ab92-a370c2cb3558) where X is the predicted set of pixels and Y is the ground truth. The Dice coefficient is defined to be 0 when both X and Y are empty. The leaderboard score is the mean of the Dice coefficients for each image in the test set.
+### Existing Files
+#### train.csv 
+![Screenshot 2024-04-16 at 23 25 03](https://github.com/marioholzheu/MLFinalProject/assets/163416187/6220a116-d72f-490b-aeb6-e6c8d820ee4a)
 
-- Hausdorff distance is a method for calculating the distance between segmentation objects A and B, by calculating the furthest point on object A from the nearest point on object B. For 3D Hausdorff, we construct 3D volumes by combining each 2D segmentation with slice depth as the Z coordinate and then find the Hausdorff distance between them. (In this competition, the slice depth for all scans is set to 1.) The scipy code for Hausdorff is linked. The expected / predicted pixel locations are normalized by image size to create a bounded 0-1 score.
+Three Columns:
+- ID -> unique identifier
+- Class -> 3 unique values: stomach, large_bowel, small_bowel
+- Segmentation -> missing masks for some files 
 
-#### Existing Data and Files
+#### sample_submission.csv
+![Screenshot 2024-04-16 at 23 29 10](https://github.com/marioholzheu/MLFinalProject/assets/163416187/5719add9-76cd-4453-a479-29e3013163ba)
+
+
+
+#### train/ 
+- 85 cases / 1 - 5 Sets / 144 images or 
+
+
+
 
 #### Data Analysis
+Data Analysis well explained - good for understanding the project better: https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda
+
+Core Informations:
+- ...
+- 
+
 
 
 # 2. Existing Solutions 
