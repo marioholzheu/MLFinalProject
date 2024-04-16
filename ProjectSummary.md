@@ -51,8 +51,8 @@ Test Data (same as Train plus):
 - Entirely Unseen -> only accesible in Kaggle while running for submission
 - About 50 Cases
 
-### Existing Files
-#### train.csv 
+#### Existing Files
+##### train.csv 
 ![Screenshot 2024-04-16 at 23 25 03](https://github.com/marioholzheu/MLFinalProject/assets/163416187/6220a116-d72f-490b-aeb6-e6c8d820ee4a)
 
 Three Columns:
@@ -60,10 +60,10 @@ Three Columns:
 - Class -> 3 unique values: stomach, large_bowel, small_bowel
 - Segmentation -> missing masks for some files 
 
-#### sample_submission.csv
+##### sample_submission.csv
 ![Screenshot 2024-04-16 at 23 29 10](https://github.com/marioholzheu/MLFinalProject/assets/163416187/5719add9-76cd-4453-a479-29e3013163ba)
 
-#### train folder
+##### train folder
 - 85 cases / 1 - 5 Sets / 144 images or 80 images
 - Images name: (ex. 276_276_1.63_1.63.png)
   - always includes 4 numbers: slice width / height (integers in pixels) -> resolution - and width / height pixel spacing (floating points in mm) -> size of pixel 
@@ -93,7 +93,7 @@ Two different pixel spacings:
 1.63 x 1.63 (1200x)
 
 #### Cases: 
-
+Most Cases have 144 Slices - some 80 
 
 
 # 2. Existing Solutions 
