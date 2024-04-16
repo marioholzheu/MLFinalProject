@@ -65,9 +65,14 @@ Three Columns:
 
 
 
-#### train/ 
-- 85 cases / 1 - 5 Sets / 144 images or 
+#### train folder
+- 85 cases / 1 - 5 Sets / 144 images or ... images
+- Images name: (ex. 276_276_1.63_1.63.png)
+  - always includes 4 numbers: slice width / height (integers in pixels) -> resolution - and width / height pixel spacing (floating points in mm) -> size of pixel 
 
+#### test folder
+- empty -> hidden test set
+ 
 
 
 
