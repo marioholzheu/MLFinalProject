@@ -111,12 +111,12 @@ Most Used Models
 
 ## Explanation for different Code Solutions
 
-### Train 2.5D U_Net https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch - public score 0.862 + infer
+### Train 2.5D U_Net - https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch - public score 0.862 + infer
 
-### UNET - well explained: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch - public score 0.842 + infer 
+### UNET - https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch - public score 0.842 + infer 
 
 
-### 3rd Place Winner - not well explained https://www.kaggle.com/code/hesene/3rd-place-winning-solution - public score 0.89 (infer)
+### 3rd Place Winner - https://www.kaggle.com/code/hesene/3rd-place-winning-solution - public score 0.89 (infer)
 
 
 ### ANOTHER MODEL
