@@ -120,7 +120,7 @@ Most Used Models
 
 
 ### ANOTHER MODEL
-##PSP,UET,DEEPLAB,SwinUnet
+## PSP,UET,DEEPLAB,SwinUnet
 https://www.kaggle.com/code/masatomurakawamm/uwmgi-pspnet-u-net-deeplabv3-swin-unet
 
 Model runs correctly on Kaggle. However still needs to be configured to run locally on colab.
@@ -129,7 +129,7 @@ Loss: Focal Loss
 Optimizer: Adam
 Lr : 1e-4
 
-Other than that differnet models are built with their own settings such as lr for #Swin-Unet is 1e-3 and loss is given in the following manner :
+Other than that differnet models are built with their own settings such as lr for Swin-Unet is 1e-3 and loss is given in the following manner :
 
      optimizer=keras.optimizers.Adam(lr=1e-3),
               metrics=['accuracy', losses.dice_coef]
