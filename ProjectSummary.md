@@ -138,6 +138,7 @@ Other than that differnet models are built with their own settings such as lr fo
 A Still to be reviewed in what aspects are the other models being used. It is likely the models are initialised and deleted at the end. The only model run is deeplabv3 possibly due to alck of resourcs to run all models. Code provides a nice abseline to try and run the other odels with the same data preparation since the models' architecture has been defined already. 
 
 Suggested changes: Set-up training loop to run for different models, one-by-one considering the GPU resources. 
+Point to be noted: Model runs in original development environment. Not experimented on the the most up-to-date environment.
 
 
 ### ANOTHER MODEL
