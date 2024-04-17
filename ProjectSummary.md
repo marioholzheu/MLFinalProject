@@ -120,6 +120,25 @@ Most Used Models
 
 
 ### ANOTHER MODEL
+##PSP,UET,DEEPLAB,SwinUnet
+https://www.kaggle.com/code/masatomurakawamm/uwmgi-pspnet-u-net-deeplabv3-swin-unet
+
+Model runs correctly on Kaggle. However still needs to be configured to run locally on colab.
+Model trained and tested: Deeplabv3
+Loss: Focal Loss
+Optimizer: Adam
+Lr : 1e-4
+
+Other than that differnet models are built with their own settings such as lr for #Swin-Unet is 1e-3 and loss is given in the following manner :
+
+     optimizer=keras.optimizers.Adam(lr=1e-3),
+              metrics=['accuracy', losses.dice_coef]
+
+              
+A Still to be reviewed in what aspects are the other models being used. It is likely the models are initialised and deleted at the end. The only model run is deeplabv3 possibly due to alck of resourcs to run all models. Code provides a nice abseline to try and run the other odels with the same data preparation since the models' architecture has been defined already. 
+
+Suggested changes: Set-up training loop to run for different models, one-by-one considering the GPU resources. 
+
 
 ### ANOTHER MODEL
 
@@ -155,7 +174,7 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 
 
 Yaseen:
-Drawbacks from current model. 
+Drawbacks from current model(3rd solution). 
 Ambiguity for hyperparameters, not specified as model uses different pretrained models. To make changes in that model we will have to delve deeper into 10 or so pretrained models with pre initialized weights and hyperparameters. 
 Code difficult to implement if wamtedto make any changes. A very real possibility that the hidden models used for different layers of the solution are pretrained with hidden hyperparameters for the winning solution on 3rd place. 
 Currently looking into 2.5D, Unet, Unet++ and 3dUnet. 
