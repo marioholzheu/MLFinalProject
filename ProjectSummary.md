@@ -111,12 +111,17 @@ Most Used Models
 
 ## Explanation for different Code Solutions
 
-### Train 2.5D U_Net - https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch - public score 0.862 + infer
+### 2.5D U_Net - public score 0.862
+Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
+Infer: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-infer-pytorch
+### UNET -  - public score 0.842 + infer 
+Train: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch
+Infer: https://www.kaggle.com/code/awsaf49/uwmgi-unet-infer-pytorch
 
-### UNET - https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch - public score 0.842 + infer 
+### 3rd Place Winner - UNET & EfficientNet - public score 0.89 (infer)
+Infer: https://www.kaggle.com/code/hesene/3rd-place-winning-solution 
+Train: not publicly available 
 
-
-### 3rd Place Winner - https://www.kaggle.com/code/hesene/3rd-place-winning-solution - public score 0.89 (infer)
 
 
 ### Keras-Unet Model-  very nice starter code with very good visualization of the data  . Link: https://github.com/ismailazdad/uwmgit/tree/main 
