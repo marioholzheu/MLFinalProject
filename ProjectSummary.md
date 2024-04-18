@@ -73,7 +73,7 @@ Three Columns:
 
 
 #### Data Analysis
-Data Analysis well explained - good for understanding the project better but with TensorFlow: https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda
+Data Analysis well explained - good for understanding the project better but with TensorFlow: https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda -> we put some core information out of it below 
 
 Core Informations:
 
@@ -118,9 +118,12 @@ Most Used Models
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch
 - Infer: https://www.kaggle.com/code/awsaf49/uwmgi-unet-infer-pytorch
 
-### 3rd Place Winner - UNET & EfficientNet - public score 0.89 (infer)
+### UNET & EfficientNet - public score 0.89 (infer) -> 3. Place Winner 
 - Infer: https://www.kaggle.com/code/hesene/3rd-place-winning-solution 
-- Train: not publicly available 
+- Train: not publicly available
+
+### UNET - 3D Solution with MONAI (based on 2.5D U_net solution)
+- Infer: https://www.kaggle.com/code/yiheng/3d-solution-with-monai-infer 
 
 
 
