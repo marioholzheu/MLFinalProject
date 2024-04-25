@@ -2,7 +2,7 @@ absl-py==0.14.0
 access==1.1.3
 affine==2.3.0
 aiobotocore==1.4.2
-aiohttp @ file:///home/conda/feedstock_root/build_artifacts/aiohttp_1623682242266/work
+aiohttp==3.7.4
 aioitertools==0.8.0
 albumentations==1.1.0
 alembic==1.7.4
