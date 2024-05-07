@@ -1,3 +1,7 @@
+LINK to Styling Syntax:
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+
 # 1. About our Challenge
 ## About the project
 
@@ -105,9 +109,9 @@ Most Used Models
 •	DeeplabV3
 
 -> Different Approaches: 
-•	2D
-•	2.5D
-•	3D
+• 2D data refers to standard images, which contain height and width dimensions.
+• 3D data refers to volumetric data, which might include multiple sequential images over time or space (like a CT scan), or images with depth information.
+• 2.5D data often involves combining multiple 2D images taken from different perspectives or at different times to provide a more detailed or layered representation that isn't quite 3D but offers more information than a single 2D image. In the examples we saw, they normale took 3 images, so always the image before and after for attetion. 
 
 ## Explanation for different Code Solutions
 
@@ -155,20 +159,35 @@ Data Processing, Data Analysis and Data Visualization well explained:
 
 
 # 3. Our Code 
-## About the Code Base - What changes we had to do?  
+## About the Code Base 
+
+Result of 2.5D in infer:
+![Screenshot 2024-05-07 at 22 44 51](https://github.com/marioholzheu/MLFinalProject/assets/163416187/1f2a7779-3b39-4a0f-912b-e8e86243ca14)
 
 
 ## What did we change and try? 
+### Mario
+Chosen Model: Unet++ 
+
+### Yaseen 
+Chosen Model: 
+
+### Shiva
+Chosen Model: 
+
+### Nikhila
+Chosen Model: 
+
+### Result Comparison: 
 
 
 ## What other possible solutions could be tried? 
 
 
+#Conclusion: 
 
 
 
-LINK to Styling Syntax:
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 
 
