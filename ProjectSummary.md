@@ -127,8 +127,11 @@ Most Used Models
 - Train: not publicly available
 
 ### UNET - 3D Solution with MONAI (based on 2.5D U_net solution)
-- Infer: https://www.kaggle.com/code/yiheng/3d-solution-with-monai-infer 
-
+- Infer: https://www.kaggle.com/code/yiheng/3d-solution-with-monai-infer
+Drawbacks: 
+Ambiguity for hyperparameters, not specified as model uses different pretrained models. To make changes in that model we will have to delve deeper into 10 or so pretrained models with pre initialized weights and hyperparameters. 
+Code difficult to implement if wamtedto make any changes. A very real possibility that the hidden models used for different layers of the solution are pretrained with hidden hyperparameters for the winning solution on 3rd place. 
+Currently looking into 2.5D, Unet, Unet++ and 3dUnet. 
 
 ## PSP,UET,DEEPLAB,SwinUnet
 https://www.kaggle.com/code/masatomurakawamm/uwmgi-pspnet-u-net-deeplabv3-swin-unet
@@ -151,8 +154,6 @@ Suggested changes: Set-up training loop to run for different models, one-by-one 
 Point to be noted: Model runs in original development environment. Not experimented on the the most up-to-date environment.
 
 
-### ANOTHER MODEL
-
 ## Conclusion
 Data Processing, Data Analysis and Data Visualization well explained: 
 •	Just for understanding the Project better - with Tensorflow:  https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda 
@@ -167,18 +168,30 @@ Result of 2.5D in infer:
 
 ## What did we change and try? 
 ### Mario
-Chosen Model: Unet++ 
+Chosen Model: Unet, Unet++, PAN  
+
+Model Architecture of Unet++: 
 
 ### Yaseen 
 Chosen Model: 
 
+Model Architecture of (CHOSE ONE)
+
 ### Shiva
 Chosen Model: 
+
+Model Architecture of (CHOSE ONE)
 
 ### Nikhila
 Chosen Model: 
 
+Model Architecture of (CHOSE ONE)
+
+
 ### Result Comparison: 
+Comparison Table: 
+
+
 
 
 ## What other possible solutions could be tried? 
@@ -199,10 +212,5 @@ Chosen Model:
 
 
 
-Yaseen:
-Drawbacks from current model(3rd solution). 
-Ambiguity for hyperparameters, not specified as model uses different pretrained models. To make changes in that model we will have to delve deeper into 10 or so pretrained models with pre initialized weights and hyperparameters. 
-Code difficult to implement if wamtedto make any changes. A very real possibility that the hidden models used for different layers of the solution are pretrained with hidden hyperparameters for the winning solution on 3rd place. 
-Currently looking into 2.5D, Unet, Unet++ and 3dUnet. 
 
 
