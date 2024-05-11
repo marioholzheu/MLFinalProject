@@ -102,18 +102,17 @@ Most Cases have 144 Slices - some 80
 # 2. Existing Solutions 
 ## 2.1 Overview
 Most Used Models
-•	Unet: (2D and 2.5D Model) 
-•	Monai (3D Model) 
-•	DeepLabV3+
-•	DeeplabV3
+- Unet: (2D and 2.5D Model and 3D Model with MONAI)
+- DeepLabV3+
+- DeeplabV3
 
 -> Different Approaches: 
-• 2D data refers to standard images, which contain height and width dimensions.
-• 3D data refers to volumetric data, which might include multiple sequential images over time or space (like a CT scan), or images with depth information.
-• 2.5D data often involves combining multiple 2D images taken from different perspectives or at different times to provide a more detailed or layered representation that isn't quite 3D but offers more information than a single 2D image. In the examples we saw, they normale took 3 images, so always the image before and after for attetion. 
+- 2D data refers to standard images, which contain height and width dimensions.
+- 3D data refers to volumetric data, which might include multiple sequential images over time or space (like a CT scan), or images with depth information.
+- 2.5D data often involves combining multiple 2D images taken from different perspectives or at different times to provide a more detailed or layered representation that isn't quite 3D but offers more information than a single 2D image. In the examples we saw, they normale took 3 images, so always the image before and after for attention. 
 
-## 2.2 Explanation for different Code Solutions
-
+## 2.2 Sum-Up for different Code Solutions
+Link to competitions: https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/leaderboard
 ### Winner:
 The 1st place solution for the 2.5D segmentation task effectively utilizes a two-stage approach: classification followed by segmentation. Here’s a summary of how their solution operates:
 
@@ -128,7 +127,20 @@ The 1st place solution for the 2.5D segmentation task effectively utilizes a two
 - Training and Inference: The classification network uses Binary Cross-Entropy Loss (BCELoss). The segmentation network employs a combination of BCELoss and Dice Loss, weighted in a 1:3 ratio to prioritize segmentation accuracy.
 
 ### Second Place:
-
+Similar to the Winner they used a two-stage approach and 2.5D images
+- Preprocessing with YOLOv5:
+  - Background Removal: Uses YOLOv5 to crop the images effectively, removing irrelevant background details that might confuse the segmentation model.
+  - Signal Removal from Arms: In abdominal MRI imaging, RF field inhomogeneity often results in high signal intensity around the arms. YOLOv5 helps them to exclude these areas from the image before segmentation to prevent these artifacts from affecting the normalization and segmentation processes.
+- Model Details
+  - Input Handling: Processes five consecutive slices at a time (s-2, s-1, s, s+1, s+2), each resized to 512x512 pixels. This multilayer slice approach helps the model capture more contextual information than a single slice could provide.
+- Backbone Architectures:
+  - Stage 1: Uses EfficientNet B4 and Swin Base models to classify slices as positive or negative.
+  - Stage 2: Employs more robust architectures like EfficientNet L2, ConvNeXt XL, and Swin Large for enhanced feature extraction capabilities, which is crucial for accurate segmentation.
+- Decoder and Loss Functions:
+  - Utilizes UperNet as the decoder, which is known for its strong performance in semantic segmentation tasks.
+  - Applies a combination of Cross-Entropy (CE) and Dice Loss in a 1:1 ratio to optimize both pixel-wise classification accuracy and the overlap between the predicted segmentation masks and the ground truth.
+- Training Regime:
+  - Trains the models for 20 epochs with Stochastic Weight Averaging (SWA) applied over the range from the 11th to the 21st epoch, enhancing the generalization of the model.
 
 
 ### Third Place: UNET & EfficientNet - public score 0.89 (infer) -> 3. Place Winner 
