@@ -117,22 +117,33 @@ Most Used Models
 ### 2.5D U_Net - public score 0.862
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
 - Infer: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-infer-pytorch
-### UNET -  - public score 0.842 + infer 
+This solution is our base and therefore explained in point "3. Our Approaches"
+
+### UNET - public score 0.842 
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch
 - Infer: https://www.kaggle.com/code/awsaf49/uwmgi-unet-infer-pytorch
+This solution is working very similar as the 2.5D UNet. The main difference is that it works with 2D images instead of 2.5D images as in the previous solution. The rest of the code is very similar, therefore no addtional explanation necessary. 
 
 ### UNET & EfficientNet - public score 0.89 (infer) -> 3. Place Winner 
 - Infer: https://www.kaggle.com/code/hesene/3rd-place-winning-solution 
 - Train: not publicly available
 
+Yaseen -> Explain the most important stuff about the solution and what it does
+
 ### UNET - 3D Solution with MONAI (based on 2.5D U_net solution)
 - Infer: https://www.kaggle.com/code/yiheng/3d-solution-with-monai-infer
+
+Yaseen -> Explain the most important stuff about the solution and what it does
+
+Comment Mario: I think drawbacks here can be deleted then? 
 Drawbacks: 
 Ambiguity for hyperparameters, not specified as model uses different pretrained models. To make changes in that model we will have to delve deeper into 10 or so pretrained models with pre initialized weights and hyperparameters. 
 Code difficult to implement if wamtedto make any changes. A very real possibility that the hidden models used for different layers of the solution are pretrained with hidden hyperparameters for the winning solution on 3rd place. 
 Currently looking into 2.5D, Unet, Unet++ and 3dUnet. 
 
+
 ### PSP,UET,DEEPLAB,SwinUnet
+Comment Mario: add public score? 
 https://www.kaggle.com/code/masatomurakawamm/uwmgi-pspnet-u-net-deeplabv3-swin-unet
 
 Model runs correctly on Kaggle. However still needs to be configured to run locally on colab.
