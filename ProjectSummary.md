@@ -3,16 +3,16 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 
 
 # 1. About our Challenge
-## About the project
+## 1.1 About the project
 
 
-### The Challenge
+### 1.1.1 The Challenge
 UW-Madison GI Tract Image Segmentation:
 https://www.kaggle.com/c/uw-madison-gi-tract-image-segmentation
 
 The primary challenge here is to do segmentation of abdominaél medical MRI-Scans. We want to automatically segement anatomical structures like the stomach and intestines including the identification of the precise pixels in the image. We need to classify for the image slices the stomach, large_bowel and small_bowel and submit together with the pixels of the respective organ. 
 
-### The Problem 
+### 1.1.2 The Problem 
 In 2019, around 5 million people worldwide were diagnosed with a type of cancer that affects the digestive system. About half of these patients might receive radiation treatment. This treatment involves targeting the cancer with X-ray beams every day for a few weeks, while trying not to harm the stomach and intestines. New technology allows doctors to see exactly where the tumor and intestines are each day, which is important because their positions can change. Normally, doctors have to manually adjust the radiation equipment to make sure the beams hit the tumor and not the other organs, a process that takes a lot of time. This could take so long that what should be a quick treatment might last an hour, making it hard for patients. There's hope that using deep learning technology could speed this up by automatically adjusting the equipment.
 
 ![image](https://github.com/marioholzheu/MLFinalProject/assets/163416187/b5ba0dd8-a8eb-4e3c-9588-32f3af73bfe1)
@@ -21,14 +21,14 @@ The Dark red part shows the stomach and the pink line shows the tumor. The rainb
 
 The UW-Madison Carbone Cancer Center, which has been using this technology since 2015, is supporting a project to improve this process. They're providing anonymous MRI scans from their patients for a competition. The challenge is to create a computer model that can identify the stomach and intestines on these scans quickly. If successful, this would help doctors deliver stronger, safer radiation doses more quickly, improving treatment for cancer patients by reducing side effects and helping them control their cancer better.
 
-### Evaluation Metrics
+### 1.1.3 Evaluation Metrics
 This competition is evaluated on the mean Dice coefficient (40%) and 3D Hausdorff distance (60%). 
 
 - The Dice coefficient can be used to compare the pixel-wise agreement between a predicted segmentation and its corresponding ground truth. The formula is given by: ![Screenshot 2024-04-16 at 19 38 58](https://github.com/marioholzheu/MLFinalProject/assets/163416187/fff5c072-3d1c-4098-ab92-a370c2cb3558) where X is the predicted set of pixels and Y is the ground truth. The Dice coefficient is defined to be 0 when both X and Y are empty. The leaderboard score is the mean of the Dice coefficients for each image in the test set.
 
 - Hausdorff distance is a method for calculating the distance between segmentation objects A and B, by calculating the furthest point on object A from the nearest point on object B. For 3D Hausdorff, we construct 3D volumes by combining each 2D segmentation with slice depth as the Z coordinate and then find the Hausdorff distance between them. (In this competition, the slice depth for all scans is set to 1.) The scipy code for Hausdorff is linked. The expected / predicted pixel locations are normalized by image size to create a bounded 0-1 score.
 
-### The (Sustainability) Impact 
+### 1.1.4 The (Sustainability) Impact 
 If this challenge is successfull it allows radiation oncologists to safely deliver higher doses of radiation to the tumor while avoiding the stomach and intestinies. This could speed up the treatments a lot, improve the success rate and reducde side effects. Patients would have a better outcome and doctors could focus on more important tasks and even may see more patients with the saved time. By this it would also contribute to several SDGs. 
 
 This challenge adresses several of the SDGs like Good Health and Well-being, Industry, Innovation and Infrastructure and Partnerships for the Goals:
@@ -37,9 +37,9 @@ This challenge adresses several of the SDGs like Good Health and Well-being, Ind
 - Partnerships for the Goals (SDG 17): The collaboration between UW-Madison Carbone Cancer Center and the broader research community, including data scientists and technologists around the world, exemplifies a partnership that leverages resources, expertise, and technology to achieve a common goal. This cooperation is essential for sharing knowledge, technology, and resources, thereby fostering an inclusive approach to solving complex global health challenges.
 
 
-### The Data 
+## The 1.2 Data 
 
-#### Existing Data 
+### 1.2.1 Existing Data 
 Train Data: 
 - Training Annotations: RLE-encoded amsks: single value (pixel) with count of how many times that value occurs in a row -> reduction of data
 - Images: 16-bit (each pixel 65,536 shades), grayscale, PNG-Format
@@ -55,8 +55,8 @@ Test Data (same as Train plus):
 - Entirely Unseen -> only accesible in Kaggle while running for submission
 - About 50 Cases
 
-#### Existing Files
-##### train.csv 
+### 1.2.2 Existing Files
+#### train.csv 
 ![Screenshot 2024-04-16 at 23 25 03](https://github.com/marioholzheu/MLFinalProject/assets/163416187/6220a116-d72f-490b-aeb6-e6c8d820ee4a)
 
 Three Columns:
@@ -64,10 +64,10 @@ Three Columns:
 - Class -> 3 unique values: stomach, large_bowel, small_bowel
 - Segmentation -> missing masks for some files 
 
-##### sample_submission.csv
+#### sample_submission.csv
 ![Screenshot 2024-04-16 at 23 29 10](https://github.com/marioholzheu/MLFinalProject/assets/163416187/5719add9-76cd-4453-a479-29e3013163ba)
 
-##### train folder
+#### train folder
 - 85 cases / 1 - 5 Sets / 144 images or 80 images
 - Images name: (ex. 276_276_1.63_1.63.png)
   - always includes 4 numbers: slice width / height (integers in pixels) -> resolution - and width / height pixel spacing (floating points in mm) -> size of pixel 
@@ -76,7 +76,7 @@ Three Columns:
 - empty -> hidden test set
 
 
-#### Data Analysis
+### 1.2.3 Data Analysis
 Data Analysis well explained - good for understanding the project better but with TensorFlow: https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda -> we put some core information out of it below 
 
 Core Informations:
@@ -100,7 +100,7 @@ Two different pixel spacings:
 Most Cases have 144 Slices - some 80 
 
 # 2. Existing Solutions 
-## Overview
+## 2.1 Overview
 Most Used Models
 •	Unet: (2D and 2.5D Model) 
 •	Monai (3D Model) 
@@ -112,7 +112,7 @@ Most Used Models
 • 3D data refers to volumetric data, which might include multiple sequential images over time or space (like a CT scan), or images with depth information.
 • 2.5D data often involves combining multiple 2D images taken from different perspectives or at different times to provide a more detailed or layered representation that isn't quite 3D but offers more information than a single 2D image. In the examples we saw, they normale took 3 images, so always the image before and after for attetion. 
 
-## Explanation for different Code Solutions
+## 2.2 Explanation for different Code Solutions
 
 ### 2.5D U_Net - public score 0.862
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
@@ -132,7 +132,7 @@ Ambiguity for hyperparameters, not specified as model uses different pretrained 
 Code difficult to implement if wamtedto make any changes. A very real possibility that the hidden models used for different layers of the solution are pretrained with hidden hyperparameters for the winning solution on 3rd place. 
 Currently looking into 2.5D, Unet, Unet++ and 3dUnet. 
 
-## PSP,UET,DEEPLAB,SwinUnet
+### PSP,UET,DEEPLAB,SwinUnet
 https://www.kaggle.com/code/masatomurakawamm/uwmgi-pspnet-u-net-deeplabv3-swin-unet
 
 Model runs correctly on Kaggle. However still needs to be configured to run locally on colab.
@@ -153,13 +153,13 @@ Suggested changes: Set-up training loop to run for different models, one-by-one 
 Point to be noted: Model runs in original development environment. Not experimented on the the most up-to-date environment.
 
 
-## Conclusion
+## 2.2 Conclusion
 Data Processing, Data Analysis and Data Visualization well explained: 
 •	Just for understanding the Project better - with Tensorflow:  https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda 
 
 
-# 3. Our Code 
-## About the Code Base 
+# 3. Our Approaches 
+## 3.1 About the Code Base 
 UWMGI: 2.5D [Train] [PyTorch]
 
 Why this code base? 
@@ -178,21 +178,22 @@ In this project, the StratifiedGroupFold method is employed for splitting the da
 
 Result of 2.5D in infer:
 ![Screenshot 2024-05-07 at 22 44 51](https://github.com/marioholzheu/MLFinalProject/assets/163416187/1f2a7779-3b39-4a0f-912b-e8e86243ca14)
-###Hyperparameters of Unet Model: 
+
+### 3.1.1 Hyperparameters of Unet Model: 
 
 The following hyperparameters from the file were used as listed: 
 
 ![Screenshot 2024-05-11 at 18 27 53](https://github.com/marioholzheu/MLFinalProject/assets/163416187/6456b629-a323-4140-ae98-bd1417a64589)
-
  
 
-###Training Results of Unet Model: 
+### 3.1.2 Training Results of Unet Model: 
 
 
 
 
-## What did we change and try? 
+## 3.2 New Model Approaches and Comparison 
 
+Comparison: 
 
 
 ### Mario
@@ -234,7 +235,7 @@ Comparison Table:
 ## What other possible solutions could be tried? 
 
 
-#Conclusion: 
+# 4. Conclusion: 
 
 
 
