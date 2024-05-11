@@ -217,7 +217,9 @@ The following hyperparameters from the file were used as listed:
 Comparison: 
 --> FILL TABLE IN PPT IN TEAMS --> Screenshot here 
 
-### 3.2.1 UNet++ and PAN - Mario
+### 3.2.1 UNet++ - Mario
+Also tried PAN - due to 3 times higher computation I stopped this experiment as for 1/5 of the data and 5 Epochs Training would be over 7 - 8 hours. 
+
 Why Unet++
 According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-Net with the UNet++, the Unet++ gets quite better scores for all different Datasets used. Therefore it seems really promising. 
 ![Screenshot 2024-05-11 at 22 00 45](https://github.com/marioholzheu/MLFinalProject/assets/163416187/053f1362-c827-45df-950f-a5adff82eea9)
@@ -251,6 +253,7 @@ UNET 3+: A FULL-SCALE CONNECTED UNET FOR MEDICAL IMAGE SEGMENTATIONhttps://arxiv
 #### 
 
 Model Architecture of Unet++: 
+
 
 
 
