@@ -114,21 +114,57 @@ Most Used Models
 
 ## 2.2 Explanation for different Code Solutions
 
-### 2.5D U_Net - public score 0.862
-- Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
-- Infer: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-infer-pytorch
-This solution is our base and therefore explained in point "3. Our Approaches"
+### Winner:
+The 1st place solution for the 2.5D segmentation task effectively utilizes a two-stage approach: classification followed by segmentation. Here’s a summary of how their solution operates:
 
-### UNET - public score 0.842 
-- Train: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch
-- Infer: https://www.kaggle.com/code/awsaf49/uwmgi-unet-infer-pytorch
-This solution is working very similar as the 2.5D UNet. The main difference is that it works with 2D images instead of 2.5D images as in the previous solution. The rest of the code is very similar, therefore no addtional explanation necessary. 
+Overall Pipeline
+Two-Stage Approach:
 
-### UNET & EfficientNet - public score 0.89 (infer) -> 3. Place Winner 
+Classification Stage: Determines whether images contain any target objects. This stage helps in filtering out images without targets, focusing computational resources on images that actually require segmentation.
+Segmentation Stage: Performs the actual segmentation of targets within the images identified in the classification stage.
+Model-Weighted Fusion:
+
+Both stages employ a strategy of model-weighted fusion, which enhances the robustness of the solution and optimizes performance.
+Data Handling
+Data Production: Utilizes a stride size of 2 and processes three layers to create 2.5D data. This approach helps in capturing contextual spatial information across slices.
+Augmentation Techniques
+Training Time Augmentation:
+Images are resized to 640x640 or 512x512.
+Employ techniques such as RandomCrop (to 448x448), RandomFlip, Elastic Transformation, Grid Distortion, and Optical Distortion to enhance model generalizability and robustness.
+Test Time Augmentation (TTA):
+Uses horizontal flip and weighted fusion to enhance prediction accuracy, providing a slight increase in the score.
+Model Details
+Backbone and Architecture:
+Uses a U-Net architecture with EfficientNet (B4 to B7) backbones. These choices leverage the depth and efficiency of EfficientNet architectures to improve feature extraction capabilities crucial for accurate segmentation.
+Framework: Leverages a deep learning framework, specifically a custom setup by @CarnoZhao on Kaggle, tailored for this segmentation task.
+Training and Inference
+Loss Function:
+The classification network uses Binary Cross-Entropy Loss (BCELoss).
+The segmentation network employs a combination of BCELoss and Dice Loss, weighted in a 1:3 ratio to prioritize segmentation accuracy.
+Efficiency Improvements:
+Implements mixed precision training (fp16), reducing GPU memory consumption by about 50% and allowing for larger batch sizes and faster training.
+
+### Second Place:
+
+
+
+### Third Place: UNET & EfficientNet - public score 0.89 (infer) -> 3. Place Winner 
 - Infer: https://www.kaggle.com/code/hesene/3rd-place-winning-solution 
 - Train: not publicly available
 
 Yaseen -> Explain the most important stuff about the solution and what it does
+
+### Our Code Base: 2.5D U_Net - public score 0.862
+- Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
+- Infer: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-infer-pytorch
+This solution is our base and therefore explained in point "3. Our Approaches"
+
+### 2D UNET - public score 0.842 
+- Train: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch
+- Infer: https://www.kaggle.com/code/awsaf49/uwmgi-unet-infer-pytorch
+This solution is working very similar as the 2.5D UNet. The main difference is that it works with 2D images instead of 2.5D images as in the previous solution. The rest of the code is very similar, therefore no addtional explanation necessary. 
+
+
 
 ### UNET - 3D Solution with MONAI (based on 2.5D U_net solution)
 - Infer: https://www.kaggle.com/code/yiheng/3d-solution-with-monai-infer
@@ -220,13 +256,32 @@ Comparison:
 --> FILL TABLE IN PPT IN TEAMS --> Screenshot here 
 
 ### 3.2.1 UNet++ and PAN - Mario
+Why Unet++
+According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-Net with the UNet++, the Unet++ gets quite better scores for all different Datasets used. Therefore it seems really promising. 
+![Screenshot 2024-05-11 at 22 00 45](https://github.com/marioholzheu/MLFinalProject/assets/163416187/053f1362-c827-45df-950f-a5adff82eea9)
+
+
 
 #### Comparison of Unet, Unet++ and PAN - 5 Epochs, Fold 0
 
 #### Unet++
-Description of Unet++ 
+##### Description of Unet++ 
 
-#### PAN
+##### Possible Enhancements
+Backbone / Encoder: 
+Efficientnet with more parameters 
+resnet200
+densenet
+
+
+
+
+##### Paper Summary:
+Comparison U-Net and UNet++ with and without deep supervision https://arxiv.org/pdf/1807.10165
+Skip Connections Redesign: https://arxiv.org/pdf/1912.05074v2
+Language meets Vision Transformer in Medical Image Segmentation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7329239/
+UNET 3+: A FULL-SCALE CONNECTED UNET FOR MEDICAL IMAGE SEGMENTATIONhttps://arxiv.org/pdf/2004.08790v1
+#### 
 
 Model Architecture of Unet++: 
 
