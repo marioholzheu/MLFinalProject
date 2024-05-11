@@ -182,7 +182,8 @@ Addtionally each team member will analyse one of the chosen models theoratically
 
 
 ## 3.1 About the Code Base 
-UWMGI: 2.5D [Train] [PyTorch]
+Train: UWMGI: 2.5D [Train] [PyTorch] 
+Infer:  -> Works only on Kaggle with hidden test data and used for final submission 
 
 Why this code base? 
 We chose a 2.5D code solution as our base because it strikes an optimal balance between achieving better results compared to a 2D solution, while requiring less computing power and runtime than a 3D approach. The code is well-structured and modular, making it highly suitable for comparing other segmentation models besides Unet and experimenting with different parameters to achieve optimal results.
