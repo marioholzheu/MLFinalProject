@@ -224,7 +224,12 @@ According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-N
 
 
 
-#### Comparison of Unet, Unet++ and PAN - 5 Epochs, Fold 0
+#### Comparison of Unet and Unet++
+Purple: Unet++
+Pink: Unet 
+Result: Dice is 0.02 better after 5 Epochs
+![Screenshot 2024-05-11 at 23 35 05](https://github.com/marioholzheu/MLFinalProject/assets/163416187/8fc10ccc-ee43-41aa-b784-e9b1ccc8d61c)
+
 
 #### Unet++
 ##### Description of Unet++ 
