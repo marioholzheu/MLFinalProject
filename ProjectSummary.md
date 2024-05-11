@@ -117,32 +117,15 @@ Most Used Models
 ### Winner:
 The 1st place solution for the 2.5D segmentation task effectively utilizes a two-stage approach: classification followed by segmentation. Here’s a summary of how their solution operates:
 
-Overall Pipeline
-Two-Stage Approach:
-
-Classification Stage: Determines whether images contain any target objects. This stage helps in filtering out images without targets, focusing computational resources on images that actually require segmentation.
-Segmentation Stage: Performs the actual segmentation of targets within the images identified in the classification stage.
-Model-Weighted Fusion:
-
-Both stages employ a strategy of model-weighted fusion, which enhances the robustness of the solution and optimizes performance.
-Data Handling
-Data Production: Utilizes a stride size of 2 and processes three layers to create 2.5D data. This approach helps in capturing contextual spatial information across slices.
-Augmentation Techniques
-Training Time Augmentation:
-Images are resized to 640x640 or 512x512.
-Employ techniques such as RandomCrop (to 448x448), RandomFlip, Elastic Transformation, Grid Distortion, and Optical Distortion to enhance model generalizability and robustness.
-Test Time Augmentation (TTA):
-Uses horizontal flip and weighted fusion to enhance prediction accuracy, providing a slight increase in the score.
-Model Details
-Backbone and Architecture:
-Uses a U-Net architecture with EfficientNet (B4 to B7) backbones. These choices leverage the depth and efficiency of EfficientNet architectures to improve feature extraction capabilities crucial for accurate segmentation.
-Framework: Leverages a deep learning framework, specifically a custom setup by @CarnoZhao on Kaggle, tailored for this segmentation task.
-Training and Inference
-Loss Function:
-The classification network uses Binary Cross-Entropy Loss (BCELoss).
-The segmentation network employs a combination of BCELoss and Dice Loss, weighted in a 1:3 ratio to prioritize segmentation accuracy.
-Efficiency Improvements:
-Implements mixed precision training (fp16), reducing GPU memory consumption by about 50% and allowing for larger batch sizes and faster training.
+- Overall Pipeline:
+  - Two-Stage Approach: Classification Stage: Determines whether images contain any target objects. This stage helps in filtering out images without targets, focusing computational resources on images that actually require segmentation. Segmentation Stage: Performs the actual segmentation of targets within the images identified in the classification stage.
+  - Model-Weighted Fusion: Both stages employ a strategy of model-weighted fusion, which enhances the robustness of the solution and optimizes performance.
+- Data Handling: Utilizes a stride size of 2 and processes three layers to create 2.5D data. This approach helps in capturing contextual spatial information across slices.
+- Augmentation Techniques
+  - Training Time Augmentation: Images are resized to 640x640 or 512x512. Employed techniques such as RandomCrop (to 448x448), RandomFlip, Elastic Transformation, Grid Distortion, and Optical Distortion to enhance model generalizability and robustness.
+  -  Test Time Augmentation (TTA):Uses horizontal flip and weighted fusion to enhance prediction accuracy, providing a slight increase in the score.
+- Model Details: Uses a U-Net architecture with EfficientNet (B4 to B7) backbones. These choices leverage the depth and efficiency of EfficientNet architectures to improve feature extraction capabilities crucial for accurate segmentation.
+- Training and Inference: The classification network uses Binary Cross-Entropy Loss (BCELoss). The segmentation network employs a combination of BCELoss and Dice Loss, weighted in a 1:3 ratio to prioritize segmentation accuracy.
 
 ### Second Place:
 
