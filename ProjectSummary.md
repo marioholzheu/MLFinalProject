@@ -172,12 +172,12 @@ Data Processing, Data Analysis and Data Visualization well explained:
 # 3. Our Approaches 
 
 We will approach the practical part as follows: 
-- 1.⁠ Run of Unet Model (Kaggle Code) with Fold 0 and 5 Epochs  
-- 2.⁠ First Comparison: ⁠⁠Everyone in the team runs their model/backbone or 2 - 3 different models/backbones with the same hyperparameters and compare if they perform better or worse then U-Net (Only on Fold 0 and 5 Epochs)
-- 3.⁠ ⁠⁠Second Comparison: Everyone uses their best model and adjust hyperparameters until best parameters are found (Only on Fold 0)
-- 4.⁠ ⁠⁠The best configuration of each member will be used on all 5 folds 
-- 5.⁠ ⁠⁠This best model configuration will be used in the Infer File for submission on kaggle and test on the hidden test set
-- 6. Final Comparison is done
+1.⁠ Run of Unet Model (Kaggle Code) with Fold 0 and 5 Epochs  
+2.⁠ First Comparison: ⁠⁠Everyone in the team runs their model/backbone or 2 - 3 different models/backbones with the same hyperparameters and compare if they perform better or worse then U-Net (Only on Fold 0 and 5 Epochs)
+3.⁠ ⁠⁠Second Comparison: Everyone uses their best model and adjust hyperparameters until best parameters are found (Only on Fold 0)
+4.⁠ ⁠⁠The best configuration of each member will be used on all 5 folds 
+5.⁠ ⁠⁠This best model configuration will be used in the Infer File for submission on kaggle and test on the hidden test set
+6. Final Comparison is done
 
 Addtionally each team member will analyse one of the chosen models theoratically and show how they work also in comparison to the UNet Model.
 
