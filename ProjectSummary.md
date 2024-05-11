@@ -99,7 +99,6 @@ Two different pixel spacings:
 #### Cases: 
 Most Cases have 144 Slices - some 80 
 
-
 # 2. Existing Solutions 
 ## Overview
 Most Used Models
@@ -161,16 +160,54 @@ Data Processing, Data Analysis and Data Visualization well explained:
 
 # 3. Our Code 
 ## About the Code Base 
+UWMGI: 2.5D [Train] [PyTorch]
+
+Why this code base? 
+We chose a 2.5D code solution as our base because it strikes an optimal balance between achieving better results compared to a 2D solution, while requiring less computing power and runtime than a 3D approach. The code is well-structured and modular, making it highly suitable for comparing other segmentation models besides Unet and experimenting with different parameters to achieve optimal results.
+
+How does the 2.5D code work?
+The 2.5D images consist of three slices combined into one picture, as illustrated below. This process is not handled in the code; the images are precomputed and loaded directly as 2.5D images.
+![Screenshot 2024-05-11 at 18 51 32](https://github.com/marioholzheu/MLFinalProject/assets/163416187/417d9227-498b-4ef4-8c77-60dfdae17ffb)
+
+Activation Function used: 
+In this example, the sigmoid activation function is used due to the multi-label nature of the segmentation task where regions of different organs, such as the Stomach, Large Bowel, and Small Bowel, may overlap within the same image. Each pixel in the image can belong to multiple classes simultaneously, and sigmoid allows for this by treating the classification of each class independently. This means the model can assign a probability for each class at each pixel without the constraints of mutual exclusivity imposed by softmax, making sigmoid ideal for scenarios where classes are not mutually exclusive and can overlap.
+
+Folds with function StratifiedGroupFold:
+In this project, the StratifiedGroupFold method is employed for splitting the data to prevent data leakage and to ensure a balanced distribution between empty and non-empty mask cases. Due to time constraints, only Fold 0 was utilized, and the training was limited to 5 epochs on the existing UNet model, which features an efficientnet-b0 backbone. This configuration serves as the foundation for our initial round of model comparison, allowing us to efficiently establish a baseline performance while managing resource and time limitations effectively.
+
 
 Result of 2.5D in infer:
 ![Screenshot 2024-05-07 at 22 44 51](https://github.com/marioholzheu/MLFinalProject/assets/163416187/1f2a7779-3b39-4a0f-912b-e8e86243ca14)
+###Hyperparameters of Unet Model: 
+
+The following hyperparameters from the file were used as listed: 
+
+![Screenshot 2024-05-11 at 18 27 53](https://github.com/marioholzheu/MLFinalProject/assets/163416187/6456b629-a323-4140-ae98-bd1417a64589)
+
+ 
+
+###Training Results of Unet Model: 
+
+
 
 
 ## What did we change and try? 
+
+
+
 ### Mario
 Chosen Model: Unet, Unet++, PAN  
 
+#### Comparison of Unet, Unet++ and PAN - 5 Epochs, Fold 0
+
+#### Unet++
+Description of Unet++ 
+
+#### PAN
+
 Model Architecture of Unet++: 
+
+
 
 ### Yaseen 
 Chosen Model: 
