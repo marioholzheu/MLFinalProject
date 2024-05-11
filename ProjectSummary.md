@@ -247,11 +247,6 @@ Chosen Model:
 Model Architecture of (CHOSE ONE)
 
 
-### 3.2.5 Result Comparison: 
-Comparison Table: 
-
-
-
 
 ## What other possible solutions could be tried? 
 
