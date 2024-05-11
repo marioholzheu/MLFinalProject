@@ -275,7 +275,7 @@ Model Architecture of (CHOSE ONE)
 
 
 
-Extras: 
+# DELETE BEFORE SUBMISSION Extras: 
 
 ### UNET - 3D Solution with MONAI (based on 2.5D U_net solution)
 - Infer: https://www.kaggle.com/code/yiheng/3d-solution-with-monai-infer
