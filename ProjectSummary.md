@@ -202,14 +202,14 @@ In this project, the StratifiedGroupFold method is employed for splitting the da
 Result of 2.5D in infer:
 ![Screenshot 2024-05-07 at 22 44 51](https://github.com/marioholzheu/MLFinalProject/assets/163416187/1f2a7779-3b39-4a0f-912b-e8e86243ca14)
 
-### 3.1.1 Hyperparameters of Unet Model: 
+### 3.1.1 Hyperparameters of Unet Model -> Mario: 
 
 The following hyperparameters from the file were used as listed: 
 
 ![Screenshot 2024-05-11 at 18 27 53](https://github.com/marioholzheu/MLFinalProject/assets/163416187/6456b629-a323-4140-ae98-bd1417a64589)
  
 
-### 3.1.2 Training Results of Unet Model: 
+### 3.1.2 Training Results of Unet Model -> Mario: 
 
 
 
@@ -219,8 +219,7 @@ The following hyperparameters from the file were used as listed:
 Comparison: 
 --> FILL TABLE IN PPT IN TEAMS --> Screenshot here 
 
-### Mario
-Chosen Model: Unet, Unet++, PAN  
+### 3.2.1 UNet++ and PAN - Mario
 
 #### Comparison of Unet, Unet++ and PAN - 5 Epochs, Fold 0
 
@@ -233,23 +232,23 @@ Model Architecture of Unet++:
 
 
 
-### Yaseen 
+### 3.2.2 MODEL - Yaseen 
 Chosen Model: 
 
 Model Architecture of (CHOSE ONE)
 
-### Shiva
+### 3.2.3 MODEL - Shiva
 Chosen Model: 
 
 Model Architecture of (CHOSE ONE)
 
-### Nikhila
+### 3.2.4 MODEL - Nikhila
 Chosen Model: 
 
 Model Architecture of (CHOSE ONE)
 
 
-### Result Comparison: 
+### 3.2.5 Result Comparison: 
 Comparison Table: 
 
 
