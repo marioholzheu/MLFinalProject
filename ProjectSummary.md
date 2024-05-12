@@ -232,6 +232,10 @@ According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-N
 -> Result: Dice is 0.02 better after 5 Epochs
 ![Screenshot 2024-05-11 at 23 35 05](https://github.com/marioholzheu/MLFinalProject/assets/163416187/8fc10ccc-ee43-41aa-b784-e9b1ccc8d61c)
 
+Unet++ 
+Scheduler eLR vs cosine 
+
+![Screenshot 2024-05-12 at 12 24 41](https://github.com/marioholzheu/MLFinalProject/assets/163416187/54cb8e81-1b12-432d-9328-f7d15d4832de)
 
 #### Unet++
 ##### Description of Unet++ 
