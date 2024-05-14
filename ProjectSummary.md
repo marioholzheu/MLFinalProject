@@ -152,7 +152,7 @@ Yaseen -> Explain the most important stuff about the solution and what it does
 ### Our Code Base: 2.5D U_Net - public score 0.862
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
 - Infer: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-infer-pytorch
-This solution is our base and therefore explained in point "3. Our Approaches"
+This solution is our base and therefore explained in point "3. Our Approaches". 
 
 ### 2D UNET - public score 0.842 
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch
@@ -197,8 +197,12 @@ Folds with function StratifiedGroupFold:
 In this project, the StratifiedGroupFold method is employed for splitting the data to prevent data leakage and to ensure a balanced distribution between empty and non-empty mask cases. Due to time constraints, only Fold 0 was utilized, and the training was limited to 5 epochs on the existing UNet model, which features an efficientnet-b0 backbone. This configuration serves as the foundation for our initial round of model comparison, allowing us to efficiently establish a baseline performance while managing resource and time limitations effectively.
 
 
+
 Result of 2.5D in infer:
 ![Screenshot 2024-05-07 at 22 44 51](https://github.com/marioholzheu/MLFinalProject/assets/163416187/1f2a7779-3b39-4a0f-912b-e8e86243ca14)
+
+<img width="831" alt="Screenshot 2024-05-14 at 08 50 15" src="https://github.com/marioholzheu/MLFinalProject/assets/163416187/a3f187dc-18b3-4d27-9a23-61284a9ae4e0">
+
 
 ### 3.1.1 Hyperparameters of Unet Model -> Mario: 
 
