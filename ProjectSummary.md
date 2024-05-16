@@ -212,7 +212,6 @@ The following hyperparameters from the file were used as listed:
 
 
 
-
 ## 3.2 New Model Approaches and Comparison 
 
 Comparison: 
@@ -228,15 +227,24 @@ According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-N
 
 
 #### Comparison of Unet and Unet++
+
+Quantitative Results: 
 - Purple: Unet
 - Pink: Unet++ -> Higher Dice and Jacccard  
 -> Result: Dice is 0.02 better after 5 Epochs
 ![Screenshot 2024-05-11 at 23 35 05](https://github.com/marioholzheu/MLFinalProject/assets/163416187/8fc10ccc-ee43-41aa-b784-e9b1ccc8d61c)
 
+Qualitative Results: 
+<img width="907" alt="Screenshot 2024-05-14 at 17 45 33" src="https://github.com/marioholzheu/MLFinalProject/assets/163416187/629930f7-330a-47d0-a430-a63bcaed1b0b">
+
 Unet++ 
 Scheduler eLR vs cosine 
 
 ![Screenshot 2024-05-12 at 12 24 41](https://github.com/marioholzheu/MLFinalProject/assets/163416187/54cb8e81-1b12-432d-9328-f7d15d4832de)
+
+
+
+
 
 #### Unet++
 ##### Description of Unet++ 
