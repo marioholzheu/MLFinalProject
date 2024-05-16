@@ -269,9 +269,23 @@ Model Architecture of Unet++:
 
 
 ### 3.2.2 MODEL - Yaseen 
-Chosen Model: 
+##Chosen Models: 
+#PSPNet:
+Model Architecture:
 
-Model Architecture of (CHOSE ONE)
+ ![Screenshot 2024-05-14 213934](https://github.com/marioholzheu/MLFinalProject/assets/102143794/a649e293-c883-4893-a007-fd4d4a43056b)
+ 
+#FPNet:
+Model Architecture:
+
+![FPN conceptual](https://github.com/marioholzheu/MLFinalProject/assets/102143794/8e508b2f-603e-4293-a634-90efec8b00be)
+
+
+#LinkNet:
+Model Architecture:
+
+![Screenshot 2024-05-16 103610](https://github.com/marioholzheu/MLFinalProject/assets/102143794/07f61fce-76b9-421b-b677-617e9d476f0f)
+
 
 ### 3.2.3 MODEL - Shiva
 Chosen Model: 
@@ -279,7 +293,8 @@ Chosen Model:
 Model Architecture of (CHOSE ONE)
 
 ### 3.2.4 MODEL - Nikhila
-Chosen Model: 
+Chosen Model:
+
 
 Model Architecture of (CHOSE ONE)
 
