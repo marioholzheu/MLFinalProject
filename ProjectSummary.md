@@ -198,8 +198,6 @@ In this project, the StratifiedGroupFold method is employed for splitting the da
 Result of 2.5D in infer:
 ![Screenshot 2024-05-07 at 22 44 51](https://github.com/marioholzheu/MLFinalProject/assets/163416187/1f2a7779-3b39-4a0f-912b-e8e86243ca14)
 
-<img width="831" alt="Screenshot 2024-05-14 at 08 50 15" src="https://github.com/marioholzheu/MLFinalProject/assets/163416187/a3f187dc-18b3-4d27-9a23-61284a9ae4e0">
-
 
 ### 3.1.1 Hyperparameters of Unet Model -> Mario: 
 
