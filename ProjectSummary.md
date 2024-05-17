@@ -171,7 +171,7 @@ Segmentation:
 
 
 
-### Our Code Base: 2.5D U_Net - public score 0.862
+### 2.5D U_Net - public score 0.862
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
 - Infer: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-infer-pytorch
 This solution is our base and therefore explained in point "3. Our Approaches". 
@@ -181,12 +181,12 @@ This solution is our base and therefore explained in point "3. Our Approaches".
 - Infer: https://www.kaggle.com/code/awsaf49/uwmgi-unet-infer-pytorch
 This solution is working very similar as the 2.5D UNet. The main difference is that it works with 2D images instead of 2.5D images as in the previous solution. The rest of the code is very similar, therefore no addtional explanation necessary. 
 
-
-
-
-## 2.2 Conclusion
-Data Processing, Data Analysis and Data Visualization well explained: 
-•	Just for understanding the Project better - with Tensorflow:  https://www.kaggle.com/code/dschettler8845/uwm-gi-tract-image-segmentation-eda 
+## 2.3 Conclusion:
+- Unet Models might still be one of the best appraoches possible. 
+- 2.5D Solution might be the most promising one for this challenge for good results
+- Backbones with more Parameters like Efficient-Net B7 achieve better results
+- Training could happen on lower LR and higher Epochs, but we probably have not the computation power for this
+- We should select the 2.5D U_net File as it has great modular code available, uses 2.5D Dimensions and also can be changed to many different models and trained on them according to the models and encoder listed here: https://smp.readthedocs.io/en/latest/models.html. SMP Solutions were also part of one of the winner solutions. Furthermore we have the possibility to link it to WANDB for visualizations, logging and saving of models.  
 
 
 # 3. Our Approaches 
