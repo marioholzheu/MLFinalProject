@@ -294,11 +294,14 @@ Model Architecture of (CHOSE ONE)
 
 ### 3.2.4 MODEL - Nikhila
 Chosen Model: Model Architecture of MA-Net
+
 The Multi-Scale Attention Net (MA-Net) can capture rich contextual dependencies based on the attention mechanism. Two blocks are designed, Position-wise Attention Block (PAB) and Multi-scale Fusion Attention Block (MFAB). The PAB is used to model the feature interdependencies in spatial dimensions, which capture the spatial dependencies between pixels in a global view. In addition, the MFAB is to capture the channel dependencies between any feature maps by fusing high and low-level semantic features. The channel dependencies of high-level and low-level feature maps are fused in a sum manner, which aims to obtain rich Multi-scale semantic information of feature maps by using attention mechanism and improve network performance. 
+
+Model Architecture:
 <img width="853" alt="Screenshot 2024-05-16 at 14 42 45" src="https://github.com/marioholzheu/MLFinalProject/assets/75714795/e64702b3-bf3a-4b2d-b17b-dd086c2c2262">
 
 
-![image](https://github.com/marioholzheu/MLFinalProject/assets/75714795/b6470b83-e8ee-435e-b7be-ea3d0cff38c3)
+
 
 
 
