@@ -144,10 +144,32 @@ Similar to the Winner they used a two-stage approach and 2.5D images
 
 
 ### Third Place: UNET & EfficientNet - public score 0.89 (infer) -> 3. Place Winner 
-- Infer: https://www.kaggle.com/code/hesene/3rd-place-winning-solution 
-- Train: not publicly available
+- Infer: https://www.kaggle.com/code/hesene/3rd-place-winning-solution
+- 
+Pre-processing with EfficientDet-D0:
+- Used 5-Fold Cross Validation
+- Size: 256
+- Epoch: 5
+- Default parameters for other settings.
+- Generated training samples via image preprocessing and relabeled bad bounding boxes.
 
-Yaseen -> Explain the most important stuff about the solution and what it does
+Classification
+- 35 Epochs, LR 3e-4 or 5e-4, BCE loss 
+- Model: Unet (Smp-Unet and Timm-Unet with different backbones and classification branches):
+  - Smp-Unet efficientnet-b7, size=320, slice=5
+  - Timm-Unet efficientnet-v2-l, size=320, slice=3
+  - Timm-Unet efficientnet-v2-l, size=320, slice=5
+  - Timm-Unet efficientnet-v2-m, size=352, slice=5
+  - Timm-Unet efficientnet-b7ns, size=320, slice=5
+Segmentation:
+- Epochs 35, ComboLoss(BCE and Dice), all 5 slices, only positve samples from classification used, 
+- Model: Timm-Unet with EfficientNet backbones.
+  - Timm-Unet efficientnet-v2-l, size=384
+  - Timm-Unet efficientnet-v2-l-1, size=416
+  - Timm-Unet efficientnet-v2-l-2, size=416
+  - Timm-Unet efficientnet-v2-m, size=416
+
+
 
 ### Our Code Base: 2.5D U_Net - public score 0.862
 - Train: https://www.kaggle.com/code/awsaf49/uwmgi-2-5d-train-pytorch
