@@ -430,20 +430,57 @@ https://ieeexplore.ieee.org/abstract/document/10328779
 
 ### 3.2.3 MODEL - Shiva
 Chosen Model: DeepLabV3:
-Model Architecture: A diagram of a block diagram
 
-Description automatically generated
 
 Purpose: DeepLabV3 is tailored for high-precision semantic segmentation tasks, emphasizing both accuracy and computational efficiency.
-Architecture:
-Encoder-Decoder Structure: Similar to other semantic segmentation models, DeepLabV3 comprises an encoder to extract features and a decoder to refine segmentation details.
-Dilated Convolutions: DeepLabV3 utilizes dilated convolutions in the encoder to effectively enlarge the receptive field without increasing parameters or computational cost excessively.
-ASPP (Atrous Spatial Pyramid Pooling): This module in the encoder employs parallel dilated convolutions with different rates to capture multi-scale contextual information.
-Skip Connections: To preserve spatial details, skip connections are employed, integrating features from different scales into the decoder.
-CRF (Conditional Random Fields): DeepLabV3 often incorporates CRF post-processing to refine segmentation boundaries and improve localization accuracy.
-Efficiency: Despite its sophisticated architecture, DeepLabV3 is engineered for efficiency, achieving remarkable performance while being computationally feasible for various real-world applications.
+Architecture:  
+![image](https://github.com/marioholzheu/MLFinalProject/assets/108298847/2091b4a7-295b-4097-87e2-a73836844bc8)
 
-Model Architecture of (CHOSE ONE)
+**Encoder-Decoder Structure:** Similar to other semantic segmentation models, DeepLabV3 comprises an encoder to extract features and a decoder to refine segmentation details.
+**Dilated Convolutions:** DeepLabV3 utilizes dilated convolutions in the encoder to effectively enlarge the receptive field without increasing parameters or computational cost excessively.
+**ASPP (Atrous Spatial Pyramid Pooling):** This module in the encoder employs parallel dilated convolutions with different rates to capture multi-scale contextual information.
+**Skip Connections:** To preserve spatial details, skip connections are employed, integrating features from different scales into the decoder.
+CRF (Conditional Random Fields): DeepLabV3 often incorporates CRF post-processing to refine segmentation boundaries and improve localization accuracy.
+**Efficiency:** Despite its sophisticated architecture, DeepLabV3 is engineered for efficiency, achieving remarkable performance while being computationally feasible for various real-world applications.
+
+
+**Difference between UNet and DeepLab:**
+UNet:
+
+Purpose: Specialized for biomedical image segmentation, excelling in fine detail capture and small object handling.
+Architecture: Encoder-decoder with skip connections, emphasizing high-resolution feature preservation.
+Use Cases: Primarily used in biomedical imaging tasks like cell segmentation and tumor detection.
+
+DeepLab:
+
+Purpose: Designed for general-purpose semantic segmentation tasks, aiming for high accuracy with computational efficiency.
+Architecture: Utilizes dilated convolutions and atrous spatial pyramid pooling for multi-scale context capturing, often with an encoder-only structure.
+Use Cases: Widely applicable in various domains, including satellite imagery analysis, autonomous driving, and robotics.
+
+**Quantitative results**
+Metrics and Parameters set:
+Backbone = Resnet 34
+Epoch = 5
+
+
+![image](https://github.com/marioholzheu/MLFinalProject/assets/108298847/4a776ba0-0b5d-4b45-8ff8-ae13e206e1c1)
+
+Metrics and Parameters set:
+Backbone = Effiecientnet 01
+Epoch = 10
+
+![image](https://github.com/marioholzheu/MLFinalProject/assets/108298847/97a1fa56-4905-424b-affd-49a7f84c2026)
+
+**Qualitative results**
+
+
+![image](https://github.com/marioholzheu/MLFinalProject/assets/108298847/146ad230-65dc-4be1-8581-984286ac8cdf)
+Some of the observations from the results:
+
+High Accuracy: Clear delineation of large bowel, small bowel, and stomach.​
+Precision: Minimal misclassification with distinct organ boundaries.​
+Robust Generalization: Consistent performance across various abdominal cross-sections.
+
 
 ### 3.2.4 MODEL - Nikhila
 Chosen Model: Model Architecture of MA-Net
