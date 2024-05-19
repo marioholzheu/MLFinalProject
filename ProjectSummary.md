@@ -296,20 +296,20 @@ Source: https://miro.medium.com/v2/resize:fit:2000/1*XmqyKSM3I68GWGJg3V5ZkQ.jpeg
 
 UNet++ improves upon the original UNet architecture for image segmentation by incorporating nested and dense skip connections, which enhance feature propagation and capture multi-scale information. This structure allows for better feature fusion, leading to more accurate segmentation results, particularly in handling fine details and small objects. Additionally, UNet++ offers greater flexibility in network design and improves gradient flow during training, making it more adaptable and effective for various complex and imbalanced datasets.
 
-
 ##### Possible Enhancements
-Backbone / Encoder: 
-Efficientnet with more parameters like B7
-resnet200
-densenet
-
+- Backbone / Encoder: Efficientnet with more parameters like B7, resnet200, densenet
+- More Epochs: 15 - 25 Epochs
+- Multimodel Approach: We should use multi models like some competitors
+- 2 Step Approach: Combines Multilevel Approach with Approach to use different model for segementation and classification
+- Read through more papers and use promising approaches and best hyperparameters
+- Look for additional dataset
+- Finsih up the infer file for final predictions on truly unseen data
 
 ##### Intersting Papers for the Topic:
-- https://arxiv.org/pdf/1807.10165Comparison U-Net and UNet++ with and without deep supervision 
-- Skip Connections Redesign: https://arxiv.org/pdf/1912.05074v2
-- Language meets Vision Transformer in Medical Image Segmentation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7329239/
-- UNET 3+: A FULL-SCALE CONNECTED UNET FOR MEDICAL IMAGE SEGMENTATIONhttps://arxiv.org/pdf/2004.08790v1
-
+- U-Net and UNet++ with and without deep supervision: https://arxiv.org/pdf/1807.10165
+- Comparison Skip Connections Redesign: https://arxiv.org/pdf/1912.05074v2
+- Language meets Vision Transformer in Medical Image Segmentation: https://arxiv.org/pdf/2206.14718
+- UNET 3+: A FULL-SCALE CONNECTED UNET FOR MEDICAL IMAGE SEGMENTATION https://arxiv.org/pdf/2004.08790v1
 
 ### 3.2.2 MODEL - Yaseen 
 ###Chosen Models: 
@@ -342,13 +342,6 @@ The Multi-Scale Attention Net (MA-Net) can capture rich contextual dependencies 
 
 Model Architecture:
 <img width="853" alt="Screenshot 2024-05-16 at 14 42 45" src="https://github.com/marioholzheu/MLFinalProject/assets/75714795/e64702b3-bf3a-4b2d-b17b-dd086c2c2262">
-
-
-
-
-
-
-## What other possible solutions could be tried? 
 
 
 # 4. Conclusion: 
