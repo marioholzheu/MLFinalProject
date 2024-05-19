@@ -243,7 +243,8 @@ Comparison:
 Why Unet++
 According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-Net with the UNet++, the Unet++ gets quite better scores for all different Datasets used. This can be achieved due to nested and dense skip connections. Therefore it seems really promising. 
 ![Screenshot 2024-05-11 at 22 00 45](https://github.com/marioholzheu/MLFinalProject/assets/163416187/053f1362-c827-45df-950f-a5adff82eea9)
-I also tried to experiment with PAN Model additionally, as training time was way higher, I stopped this approach due to time reason and to focus more on Unet++
+
+I also tried to experiment with PAN Model additionally, as training time was way higher and results seemed not better, I stopped this approach right away due to time reason and to focus more on Unet++. 
 
 #### Comparison of Unet and Unet++
 The same hyperparameter were used to see if the model itself can already outperfom unet which was the case. 
@@ -251,6 +252,7 @@ Quantitative Results:
 - Purple: Unet
 - Pink: Unet++ -> Higher Dice and Jacccard  
 -> Result: Dice is 0.02 better after 5 Epochs
+  
 ![Screenshot 2024-05-11 at 23 35 05](https://github.com/marioholzheu/MLFinalProject/assets/163416187/8fc10ccc-ee43-41aa-b784-e9b1ccc8d61c)
 
 #### Unet++ Approaches:
@@ -264,6 +266,7 @@ Tried Hyperparameters:
 
 
 ![image](https://github.com/marioholzheu/MLFinalProject/assets/163416187/77fc7031-f992-4851-bc82-b3dfe7af0750)
+
 In the run where I tried this learning rate, the model still learned in Epoch 10. Till then this approach did not outperform others. So its hard to say without training on like 15 - 20 Epochs if this would have achieved my best results. Till Epoch 10 it didnt. 
 
 #####Best Combination:
