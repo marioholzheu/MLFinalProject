@@ -290,10 +290,11 @@ The models would still benefit on more Epochs in my opinion as their are still i
 ##### Description of Unet++ 
 
 Architecture: 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Ftowardsdatascience.com%2Fbiomedical-image-segmentation-unet-991d075a3a4b&psig=AOvVaw0v_UJo7VDHWCnW_TQsUfb1&ust=1716198285270000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCblvu2mYYDFQAAAAAdAAAAABAE![image](https://github.com/marioholzheu/MLFinalProject/assets/163416187/e10d39d7-b38b-4062-8db6-281757fba0a1)
+
+![Screenshot 2024-05-19 at 11 56 01](https://github.com/marioholzheu/MLFinalProject/assets/163416187/eea7508e-1cdb-4496-9daa-a87ee42b7ac7)
+Source: https://miro.medium.com/v2/resize:fit:2000/1*XmqyKSM3I68GWGJg3V5ZkQ.jpeg
 
 UNet++ improves upon the original UNet architecture for image segmentation by incorporating nested and dense skip connections, which enhance feature propagation and capture multi-scale information. This structure allows for better feature fusion, leading to more accurate segmentation results, particularly in handling fine details and small objects. Additionally, UNet++ offers greater flexibility in network design and improves gradient flow during training, making it more adaptable and effective for various complex and imbalanced datasets.
-
 
 
 ##### Possible Enhancements
@@ -308,9 +309,6 @@ densenet
 - Skip Connections Redesign: https://arxiv.org/pdf/1912.05074v2
 - Language meets Vision Transformer in Medical Image Segmentation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7329239/
 - UNET 3+: A FULL-SCALE CONNECTED UNET FOR MEDICAL IMAGE SEGMENTATIONhttps://arxiv.org/pdf/2004.08790v1
-#### 
-
-
 
 
 ### 3.2.2 MODEL - Yaseen 
