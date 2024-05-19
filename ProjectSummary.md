@@ -295,8 +295,8 @@ It can be seen in the qualitative comparison that the model predicts many parts 
 
 ![Screenshot 2024-05-19 at 22 17 46](https://github.com/marioholzheu/MLFinalProject/assets/163416187/103db344-56a8-4ad1-b452-e261818946e4)
 
-#####Conclusion 
-The models would still benefit on more Epochs in my opinion as their are still improving, due to long training time (around 10 hours) with 10 Epochs, I did not have the chance to invest more time. I would also like to try the Efficientnet-b7 Backbone which had quite some promising results in other competitors, which also due to computational needs would lead to high training time. I think the UNet++ Model could be the most promising model for the challenge, and improvements are still possible. As can be seen in Qualititve Results, Model predictions are not perfect yet and improvements should be done.
+##### Conclusion 
+The models would still benefit on more Epochs in my opinion as their are still improving, due to long training time (around 10 hours) with 10 Epochs, I did not have the chance to invest more time.  I would also like to try the Efficientnet-b7 Backbone which had quite some promising results in other competitors, which also due to computational needs would lead to high training time. Additionally with more epochs I would also try different schedulers, and a multimodel approach for classification and then segmentation.I think the UNet++ Model could be the most promising model for the challenge, and improvements are still possible. As can be seen in Qualititve Results, Model predictions are not perfect yet and improvements should be done.
 
 #### Unet++
 ##### Description of Unet++ 
