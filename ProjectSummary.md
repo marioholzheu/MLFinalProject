@@ -278,7 +278,7 @@ Training Processes Comparison
 The graph shows some of the differenet models I trained with
 Color:
 - Pink     Unet++, efficientnet-b4, lr 0.002, Dice & BCE Loss 1:3
-- Red      Unet++, efficientnet-b0, lr 0.009, 
+- Red      Unet++, efficientnet-b0, lr 0.009, BCE & Tversky Loss 1:1 
 - Green    Unet++, efficientnet-b4, lr 0.002, Dice & BCE Loss 1:3
 
 Pink Run: 
