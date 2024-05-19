@@ -221,14 +221,15 @@ Result of 2.5D in infer:
 ![Screenshot 2024-05-07 at 22 44 51](https://github.com/marioholzheu/MLFinalProject/assets/163416187/1f2a7779-3b39-4a0f-912b-e8e86243ca14)
 
 
-### 3.1.1 Hyperparameters of Unet Model -> Mario: 
+### 3.1.1 Hyperparameters of Unet Model: 
 
 The following hyperparameters from the file were used as listed: 
 
 ![Screenshot 2024-05-11 at 18 27 53](https://github.com/marioholzheu/MLFinalProject/assets/163416187/6456b629-a323-4140-ae98-bd1417a64589)
  
 
-### 3.1.2 Training Results of Unet Model -> Mario: 
+### 3.1.2 Training Results of Unet Model: 
+![Screenshot 2024-05-19 at 11 24 08](https://github.com/marioholzheu/MLFinalProject/assets/163416187/ea10ebc1-1eb4-4a9f-859f-3dd9ce88b29c)
 
 
 
@@ -238,72 +239,90 @@ Comparison:
 --> FILL TABLE IN PPT IN TEAMS --> Screenshot here 
 
 ### 3.2.1 UNet++ - Mario
-Also tried PAN - due to 3 times higher computation I stopped this experiment as for 1/5 of the data and 5 Epochs Training would be over 7 - 8 hours. 
 
 Why Unet++
-According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-Net with the UNet++, the Unet++ gets quite better scores for all different Datasets used. Therefore it seems really promising. 
+According to this paper https://arxiv.org/pdf/1807.10165, which compares the U-Net with the UNet++, the Unet++ gets quite better scores for all different Datasets used. This can be achieved due to nested and dense skip connections. Therefore it seems really promising. 
 ![Screenshot 2024-05-11 at 22 00 45](https://github.com/marioholzheu/MLFinalProject/assets/163416187/053f1362-c827-45df-950f-a5adff82eea9)
-
-
+I also tried to experiment with PAN Model additionally, as training time was way higher, I stopped this approach due to time reason and to focus more on Unet++
 
 #### Comparison of Unet and Unet++
-
+The same hyperparameter were used to see if the model itself can already outperfom unet which was the case. 
 Quantitative Results: 
 - Purple: Unet
 - Pink: Unet++ -> Higher Dice and Jacccard  
 -> Result: Dice is 0.02 better after 5 Epochs
 ![Screenshot 2024-05-11 at 23 35 05](https://github.com/marioholzheu/MLFinalProject/assets/163416187/8fc10ccc-ee43-41aa-b784-e9b1ccc8d61c)
 
+#### Unet++ Approaches:
+Tried Hyperparameters: 
+- Backbone EffiecientNet-b0, b2, b4
+- Batch Size: 32 and 64 depending on Backbone
+- Epochs 5 - 10
+- LR: 2e-3, 2e-4 and 9e-3 (This one I got with a function to find_the_best_lr see below and in code)
+- Scheduler: CosineAnnealingLR, CosineAnnealingWarmRestarts and ReduceLRonPlateau (The last two did not make sense in my case as their advantage didnt come into play if just trained with 5 - 10 epochs as it was still learning
+- Loss Function: BCE and Dice Loss with 1:3 Ratio and ...
+
+#####Best Combination:
+- Backbone b4, BS 32, Epochs 10, LR: 2e-3, CosineAnnealingLR, BCE and Dice Loss 1:3
+
+Training Processes Comparison 
+Color:
+Unet
+Unet++, 
+Unet++, 
+Unet++, 
+
+Picture of Comparison 
+
+
 Qualitative Results: 
-<img width="907" alt="Screenshot 2024-05-14 at 17 45 33" src="https://github.com/marioholzheu/MLFinalProject/assets/163416187/629930f7-330a-47d0-a430-a63bcaed1b0b">
-
-Unet++ 
-Scheduler eLR vs cosine 
-
-![Screenshot 2024-05-12 at 12 24 41](https://github.com/marioholzheu/MLFinalProject/assets/163416187/54cb8e81-1b12-432d-9328-f7d15d4832de)
 
 
 
-
+#####Conclusion 
+The models would still benefit on more Epochs in my opinion as their are still improving, due to long training time (around 10 hours) with 10 Epochs, I did not have the chance to invest more time. I would also like to try the Efficientnet-b7 Backbone which had quite some promising results in other competitors, which also due to computational needs would lead to high training time. I think the UNet++ Model could be the most promising model for the challenge, and improvements are still possible. As can be seen in Qualititve Results, Model predictions are not perfect yet and improvements should be done.
 
 #### Unet++
 ##### Description of Unet++ 
 
+Architecture: 
+https://www.google.com/url?sa=i&url=https%3A%2F%2Ftowardsdatascience.com%2Fbiomedical-image-segmentation-unet-991d075a3a4b&psig=AOvVaw0v_UJo7VDHWCnW_TQsUfb1&ust=1716198285270000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCblvu2mYYDFQAAAAAdAAAAABAE![image](https://github.com/marioholzheu/MLFinalProject/assets/163416187/e10d39d7-b38b-4062-8db6-281757fba0a1)
+
+UNet++ improves upon the original UNet architecture for image segmentation by incorporating nested and dense skip connections, which enhance feature propagation and capture multi-scale information. This structure allows for better feature fusion, leading to more accurate segmentation results, particularly in handling fine details and small objects. Additionally, UNet++ offers greater flexibility in network design and improves gradient flow during training, making it more adaptable and effective for various complex and imbalanced datasets.
+
+
+
 ##### Possible Enhancements
 Backbone / Encoder: 
-Efficientnet with more parameters 
+Efficientnet with more parameters like B7
 resnet200
 densenet
 
 
-
-
-##### Paper Summary:
-Comparison U-Net and UNet++ with and without deep supervision https://arxiv.org/pdf/1807.10165
-Skip Connections Redesign: https://arxiv.org/pdf/1912.05074v2
-Language meets Vision Transformer in Medical Image Segmentation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7329239/
-UNET 3+: A FULL-SCALE CONNECTED UNET FOR MEDICAL IMAGE SEGMENTATIONhttps://arxiv.org/pdf/2004.08790v1
+##### Intersting Papers for the Topic:
+- https://arxiv.org/pdf/1807.10165Comparison U-Net and UNet++ with and without deep supervision 
+- Skip Connections Redesign: https://arxiv.org/pdf/1912.05074v2
+- Language meets Vision Transformer in Medical Image Segmentation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7329239/
+- UNET 3+: A FULL-SCALE CONNECTED UNET FOR MEDICAL IMAGE SEGMENTATIONhttps://arxiv.org/pdf/2004.08790v1
 #### 
-
-Model Architecture of Unet++: 
 
 
 
 
 ### 3.2.2 MODEL - Yaseen 
-##Chosen Models: 
-#PSPNet:
+###Chosen Models: 
+####PSPNet:
 Model Architecture:
 
  ![Screenshot 2024-05-14 213934](https://github.com/marioholzheu/MLFinalProject/assets/102143794/a649e293-c883-4893-a007-fd4d4a43056b)
  
-#FPNet:
+####FPNet:
 Model Architecture:
 
 ![FPN conceptual](https://github.com/marioholzheu/MLFinalProject/assets/102143794/8e508b2f-603e-4293-a634-90efec8b00be)
 
 
-#LinkNet:
+####LinkNet:
 Model Architecture:
 
 ![Screenshot 2024-05-16 103610](https://github.com/marioholzheu/MLFinalProject/assets/102143794/07f61fce-76b9-421b-b677-617e9d476f0f)
@@ -327,53 +346,12 @@ Model Architecture:
 
 
 
-Model Architecture of (CHOSE ONE)
-
-
-
 ## What other possible solutions could be tried? 
 
 
 # 4. Conclusion: 
 
 
-
-
-
-# DELETE BEFORE SUBMISSION Extras: 
-
-### UNET - 3D Solution with MONAI (based on 2.5D U_net solution)
-- Infer: https://www.kaggle.com/code/yiheng/3d-solution-with-monai-infer
-
-Yaseen -> Explain the most important stuff about the solution and what it does
-
-Comment Mario: I think drawbacks here can be deleted then? 
-Drawbacks: 
-Ambiguity for hyperparameters, not specified as model uses different pretrained models. To make changes in that model we will have to delve deeper into 10 or so pretrained models with pre initialized weights and hyperparameters. 
-Code difficult to implement if wamtedto make any changes. A very real possibility that the hidden models used for different layers of the solution are pretrained with hidden hyperparameters for the winning solution on 3rd place. 
-Currently looking into 2.5D, Unet, Unet++ and 3dUnet. 
-
-
-### PSP,UET,DEEPLAB,SwinUnet
-Comment Mario: add public score? 
-https://www.kaggle.com/code/masatomurakawamm/uwmgi-pspnet-u-net-deeplabv3-swin-unet
-
-Model runs correctly on Kaggle. However still needs to be configured to run locally on colab.
-Model trained and tested: Deeplabv3
-Loss: Focal Loss
-Optimizer: Adam
-Lr : 1e-4
-
-Other than that differnet models are built with their own settings such as lr for Swin-Unet is 1e-3 and loss is given in the following manner :
-
-     optimizer=keras.optimizers.Adam(lr=1e-3),
-              metrics=['accuracy', losses.dice_coef]
-
-              
-A Still to be reviewed in what aspects are the other models being used. It is likely the models are initialised and deleted at the end. The only model run is deeplabv3 possibly due to alck of resourcs to run all models. Code provides a nice abseline to try and run the other odels with the same data preparation since the models' architecture has been defined already. 
-
-Suggested changes: Set-up training loop to run for different models, one-by-one considering the GPU resources. 
-Point to be noted: Model runs in original development environment. Not experimented on the the most up-to-date environment.
 
 
 
