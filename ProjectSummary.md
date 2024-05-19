@@ -236,7 +236,9 @@ The following hyperparameters from the file were used as listed:
 ## 3.2 New Model Approaches and Comparison 
 
 Comparison: 
---> FILL TABLE IN PPT IN TEAMS --> Screenshot here 
+
+![Screenshot 2024-05-19 at 22 30 29](https://github.com/marioholzheu/MLFinalProject/assets/163416187/d7b814e4-423d-4431-87e0-9fbd6d5feca1)
+
 
 ### 3.2.1 UNet++ - Mario
 
@@ -273,18 +275,25 @@ In the run where I tried this learning rate, the model still learned in Epoch 10
 - Backbone b4, BS 32, Epochs 10, LR: 2e-3, CosineAnnealingLR, BCE and Dice Loss 1:3
 
 Training Processes Comparison 
+The graph shows some of the differenet models I trained with
 Color:
-Unet
-Unet++, 
-Unet++, 
-Unet++, 
+- Pink     Unet++, efficientnet-b4, lr 0.002, Dice & BCE Loss 1:3
+- Red      Unet++, efficientnet-b0, lr 0.009, 
+- Green    Unet++, efficientnet-b4, lr 0.002, Dice & BCE Loss 1:3
 
-Picture of Comparison 
+Pink Run: 
+
+![image](https://github.com/marioholzheu/MLFinalProject/assets/163416187/0c16d70e-a562-408c-90a0-e92f05b0c340)
+
+![Screenshot 2024-05-19 at 22 23 27](https://github.com/marioholzheu/MLFinalProject/assets/163416187/15d6be84-1599-4398-8599-3457faf914b5)
+
+![Screenshot 2024-05-19 at 22 23 38](https://github.com/marioholzheu/MLFinalProject/assets/163416187/d5310614-d350-4c55-a8ef-95ed50c53626)
 
 
 Qualitative Results: 
+It can be seen in the qualitative comparison that the model predicts many parts quite well, also it normally sees all the classes from the ground truth. But its no perfect in drawing the boundaries, and for smaller parts. In my opinion the model should be trained on more data, therefore we could make use of the folds. and train on all 5 folds, if computing power would be available. 
 
-
+![Screenshot 2024-05-19 at 22 17 46](https://github.com/marioholzheu/MLFinalProject/assets/163416187/103db344-56a8-4ad1-b452-e261818946e4)
 
 #####Conclusion 
 The models would still benefit on more Epochs in my opinion as their are still improving, due to long training time (around 10 hours) with 10 Epochs, I did not have the chance to invest more time. I would also like to try the Efficientnet-b7 Backbone which had quite some promising results in other competitors, which also due to computational needs would lead to high training time. I think the UNet++ Model could be the most promising model for the challenge, and improvements are still possible. As can be seen in Qualititve Results, Model predictions are not perfect yet and improvements should be done.
