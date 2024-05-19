@@ -262,6 +262,10 @@ Tried Hyperparameters:
 - Scheduler: CosineAnnealingLR, CosineAnnealingWarmRestarts and ReduceLRonPlateau (The last two did not make sense in my case as their advantage didnt come into play if just trained with 5 - 10 epochs as it was still learning
 - Loss Function: BCE and Dice Loss with 1:3 Ratio and ...
 
+
+![image](https://github.com/marioholzheu/MLFinalProject/assets/163416187/77fc7031-f992-4851-bc82-b3dfe7af0750)
+In the run where I tried this learning rate, the model still learned in Epoch 10. Till then this approach did not outperform others. So its hard to say without training on like 15 - 20 Epochs if this would have achieved my best results. Till Epoch 10 it didnt. 
+
 #####Best Combination:
 - Backbone b4, BS 32, Epochs 10, LR: 2e-3, CosineAnnealingLR, BCE and Dice Loss 1:3
 
