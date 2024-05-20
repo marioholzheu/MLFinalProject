@@ -235,7 +235,7 @@ The following hyperparameters from the file were used as listed:
 
 Comparison: 
 
-![Screenshot 2024-05-19 at 22 30 29](https://github.com/marioholzheu/MLFinalProject/assets/163416187/d7b814e4-423d-4431-87e0-9fbd6d5feca1)
+![image](https://github.com/marioholzheu/MLFinalProject/assets/75714795/6f6d86d0-745b-4bff-863a-e6572660c6f7)
 
 
 ### 3.2.1 UNet++ - Mario
