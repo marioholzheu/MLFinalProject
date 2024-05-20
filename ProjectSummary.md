@@ -1,6 +1,4 @@
-LINK to Styling Syntax:
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-
+Team Members: Mario Holzheu, Nikhila Srigiri, Manchinganti Sivarchan, Yaseen Mujahid
 
 # 1. About our Challenge
 ## 1.1 About the project
