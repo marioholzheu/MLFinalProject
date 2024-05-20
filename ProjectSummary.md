@@ -488,6 +488,17 @@ The Multi-Scale Attention Net (MA-Net) can capture rich contextual dependencies 
 Model Architecture:
 <img width="853" alt="Screenshot 2024-05-16 at 14 42 45" src="https://github.com/marioholzheu/MLFinalProject/assets/75714795/e64702b3-bf3a-4b2d-b17b-dd086c2c2262">
 
+Qualitative Analysis
+
+![image](https://github.com/marioholzheu/MLFinalProject/assets/75714795/a4665641-d851-4a08-a8ff-8bd057d64ad8)
+
+Prediction
+
+![image](https://github.com/marioholzheu/MLFinalProject/assets/75714795/0598ba4b-b055-46a1-871a-182e6fec5713)
+<img width="953" alt="manet graphs" src="https://github.com/marioholzheu/MLFinalProject/assets/75714795/89acd5d0-b72b-48df-960f-7a8003d3cb99">
+
+Learnings: I had to optimize the hyperparameters to improve generalization. The use of attention gates in the architecture and multi-scale fusion increases model complexity, potentially affecting training time and memory requirements. The model predicted constant values for valid dice and valid jaccard for higher learning rates, with NaN(not a number) values for train loss and valid loss. 
+
 
 # 4. Conclusion: 
 
